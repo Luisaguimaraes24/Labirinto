@@ -24,4 +24,4 @@ Usa as seguintes Buscas:
 Busca em profundidade (depth-first search);
 Busca em largura (breadth-first search)
 
-Defini 1 como parede 0 como caminho aberto 2 como entrada 3 como saida e 4 como o passo a passo que podemos visualizar percorrer o labirinto
+# Defini 1 como parede 0 como caminho aberto 2 como entrada 3 como saida e 4 como o passo a passo que podemos visualizar percorrer o labirinto
