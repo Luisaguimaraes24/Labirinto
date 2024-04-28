@@ -3,9 +3,9 @@ from collections import deque
 import time
 
 def generate_maze():
-    maze = [[1 for _ in range(15)] for _ in range(15)]  # tamanho da matrix
+    maze = [[1 for _ in range(15)] for _ in range(15)]  # matriz 15 por 15
 
-    #posição de entrada e saída
+    # posição de entrada e saída
     entry_position = (0, random.choice([1, 13]))  # Entrada na primeira linha, em uma posição aleatória
     exit_position = (14, random.choice([1, 13]))  # Saída na última linha, em uma posição aleatória
     maze[entry_position[0]][entry_position[1]] = 2  # Marca a entrada
@@ -40,7 +40,7 @@ def generate_maze():
         path.append(current_position)  # Adiciona a próxima posição ao caminho principal
 
     # Adiciona becos sem saída ao caminho principal
-    num_dead_ends = random.randint(3, 6)  # Define o número de becos sem saída
+    num_dead_ends = random.randint(7, 8)  # Define o número de becos sem saída
     for _ in range(num_dead_ends):
         # Escolhe uma posição aleatória ao longo do caminho principal
         position_index = random.randint(1, len(path) - 2)
@@ -142,3 +142,4 @@ if __name__ == "__main__":
     visualize_dfs(maze, entry_position, exit_position)
     print("\n\n")
     visualize_bfs(maze, entry_position, exit_position)
+
